@@ -1,0 +1,578 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: Helvetica;
+}
+
+.sign-up, .sign-in{
+  background-color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+  text-align: center;
+}
+
+.sign-up h1, .sign-in h1 {
+  color: #333333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.sign-up-form, .sign-in-form {
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 50px;
+  padding: 20px; 
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+.sign-up h2, .sign-in h2 {
+  color: #555555;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.sign-up-form button, .sign-in-form button {
+  background-color: #007BFF;
+  border: none;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 10px 20px; 
+  cursor: pointer; 
+  margin-top: 20px;
+  height: 50px;
+  width: 150px;
+  font-size: 16px;
+} 
+.sign-up-form button:hover, .sign-in-form button:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+.sign-up-form input, .sign-in-form input{
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.sign-up-form input:focus, .sign-in-form input:focus{
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.error-sign-up{
+  color: red;
+  font-size: 14px;
+}
+.dont-accaount, .do-accaount {
+  color: #555555;
+  display: flex;
+  margin: 10px;
+}
+.dont-singup, .do-singin {
+  color: #ffffff;
+  display: flex;
+  margin: 10px;
+  background-color: #007BFF;
+  width: 100px;
+  height: 30px;
+  align-items: center; 
+  justify-content: center; 
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dont-singup:hover, .do-singin:hover {
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+.success {
+  color: green;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.error{
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.navbar {
+  height: 70px;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: #e3e3e3;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between nav links */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.nav-item {
+  color: #555555;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  background-color: #007BFF;
+}
+
+.profile-pic {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+.container {
+  height: 100vh;
+  margin-top: 70px; 
+}
+
+.left-bar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 300px; 
+  height: calc(100vh - 70px); 
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;  
+  padding: 20px;
+  box-sizing: border-box; 
+}
+.left-bar-item{
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.left-bar-item:hover{
+  background-color: #007BFF;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.main {
+  margin-left: 300px;
+  padding: 20px;
+
+
+}
+.transactions{
+  margin-right: 30px;
+}
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+}
+
+.transactions h2 {
+  color: #333333;
+  margin: 0;
+}
+
+.add-transaction-button {
+  background-color: #007BFF;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.add-transaction-button:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 20px;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #007BFF;
+}
+.delete-transaction{
+  padding: 7px;
+  text-align: left;
+  border: none;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.edit-transaction{
+  padding: 7px;
+  text-align: left;
+  border: none;
+  background-color: #007BFF;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-transaction:hover{
+  background-color: darkred;
+  transition: 0.3s;
+}
+.edit-transaction:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+th{
+  color: #333333;
+  cursor: pointer;
+}
+td{
+  color: #555555;
+}
+th {
+  background-color: #e3e3e3;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.new-transaction{
+  background-color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 400px;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+.new-transaction button{
+  background-color: #007BFF;
+  border: none;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer; 
+  margin: 10px 0px;
+  height: 30px;
+  width: 70px;
+  font-size: 13px;
+}
+.new-transaction .cancel{
+  background-color: red;
+}
+.new-transaction .cancel:hover{
+  background-color: darkred;
+  transition: 0.3s;
+}
+.new-transaction .submit:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+
+.new-transaction input{
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 10px 0;
+}
+.new-transaction label{
+  color: #333333;
+
+}
+.new-transaction select{
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 10px 0;
+}
+.new-transaction input:focus, .new-transaction select:focus{
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.new-transaction p{
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+}
+
+.budget-header h2 {
+  color: #333333;
+  margin: 0;
+}
+.budget-summary{
+  display: flex;
+  justify-content: space-between;
+}
+.total-income{
+  background-color: #e3e3e3;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  font-size: 20px;
+  color: green;
+}
+.total-expense{
+  background-color: #e3e3e3;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  font-size: 20px;
+  color: red;
+
+}
+.remaining-balance{
+  background-color: #e3e3e3;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  font-size: 20px;
+}
+.loading{
+  text-align: center;
+  font-size: 40px;
+}
+.date-filters{
+  gap: 20px;
+}
+.date-filters label{
+  color: #333333;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.date-filters input{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2px; 
+  margin-left: 10px;
+  height: 30px;
+  width: 120px;
+}
+.date-filters input:focus, .date-filters input:hover{
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.new-report{
+  background-color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 400px;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+.new-report button{
+  background-color: #007BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer; 
+  margin: 10px 0px;
+  height: 30px;
+  width: 70px;
+  font-size: 13px;
+}
+.new-report .cancel-report{
+  background-color: red;
+}
+.new-report .cancel-report:hover{
+  background-color: darkred;
+  transition: 0.3s;
+}
+.new-report .submit-report:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+
+.new-report input{
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 10px 0;
+}
+.new-report label{
+  color: #333333;
+
+}
+.new-report input:focus{
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.new-report p{
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+}
+
+.reports-header h2 {
+  color: #333333;
+  margin: 0;
+}
+.add-report {
+  background-color: #007BFF;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.add-report:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+.reports-show {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* 3 columns, each 300px wide */
+  grid-gap: 20px; /* Adds space between report cards */
+  justify-content: center; /* Centers the grid */
+}
+
+.report {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.report-header{
+  display: flex;
+  background-color: #e3e3e3;
+  color: #333333;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #007BFF;
+}
+.report-edit{
+  width: 60px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007BFF;
+  color: #ffffff;
+  cursor: pointer;
+}
+.report-edit:hover{
+  background-color: #0056b3;
+  transition: 0.3s;
+}
+.report-delete{
+  background-color: red;
+  width: 60px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.report-delete:hover{
+  background-color: darkred;
+  transition: 0.3s;
+}
+.report-p {
+  flex-grow: 1; 
+  padding: 10px;
+  color: #555555;
+  background-color: #ffffff;
+  margin: 0;
+  overflow-y: auto;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+}
+
+.dashboard-header h2 {
+  color: #333333;
+  margin: 0;
+}
